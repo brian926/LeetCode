@@ -28,7 +28,17 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 ## **The Solution**
 
+To handle this problem, we will use two pointers (one on the left more character and one all the right most). Then compare the two characters, since a palindrome is the same forwards and back then moving the two pointers through the string should be equal;
+```
+"A man, a plan, a canal: Panama"
+[A] man, a plan, a canal: Panam[a]
+A [m]an, a plan, a canal: Pana[m]a
+A m[a]n, a plan, a canal: Pan[a]ma
+```
+Since we are removing all non-alphanumeric characters, we won't have to worry about empty spaces or special characters.
 
+For the code, we first define a function that inputs a character and returns true or false if there is a unicode code of that character.
+Then we initialize our pointers, our left pointer at 0 and right pointer at the end of the string. After while the left pointer is less than the right pointer, we first if there is a non-alphanumeric character. If there is, we move the pointers by one else we check if the two characters are not equal. When this occurs we return false otherwise we move both pointers up.
 
 ## **The Code**
 
