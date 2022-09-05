@@ -1,11 +1,11 @@
-# 125. Valid Palindrome
+# 125. Valid Palindrome <span style="color:Green">Easy</span>
 
 ## **The Problem**
 A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
 Given a string *s*, return *true* if it is a **palindrome**, or *false* otherwise.
 
-### **Examples**
+## **Examples**
 **Example 1**
 ```
 Input: s = "A man, a plan, a canal: Panama"

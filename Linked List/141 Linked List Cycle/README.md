@@ -1,4 +1,4 @@
-# 41. Linked list Cycle
+# 41. Linked list Cycle <span style="color:green">Easy</span>
 
 ## **The Problem**
 Given *head*, the head of a linked list, determine if the linked list has a cycle in it.
@@ -7,7 +7,7 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 Return *true* if there is a cycle in the linked list. Otherwise, return *false*.
 
-### **Examples**
+## **Examples**
 Example 1:
 ```mermaid
 graph LR
