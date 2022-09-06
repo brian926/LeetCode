@@ -1,4 +1,4 @@
-# 121. Best Time to Buy and Sell Stock <span style="color:green">Easy</span>
+# [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) <span style="color:green">Easy</span>
 
 ## **The Problem**
 You are given an array *prices* where *prices[i]* is the price of a given stock on the *ith* day.

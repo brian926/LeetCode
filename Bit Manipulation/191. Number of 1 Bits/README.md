@@ -1,4 +1,4 @@
-# 191. Number of 1 Bits <span style="color:green">Easy</span>
+# [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) <span style="color:green">Easy</span>
 
 ## **The Problem**
 Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
