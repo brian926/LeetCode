@@ -22,7 +22,7 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 ```
 **Example 2**
 ```mermaid
-graph LR;
+flowchart LR;
     1 --> 2;
     2 --> 1;
 ```
