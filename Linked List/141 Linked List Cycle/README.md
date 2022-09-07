@@ -10,7 +10,7 @@ Return *true* if there is a cycle in the linked list. Otherwise, return *false*.
 ## **Examples**
 **Example 1**
 ```mermaid
-graph LR;
+flowchart LR;
     3-->2;
     2-->0;
     -4--2;
@@ -22,7 +22,7 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 ```
 **Example 2**
 ```mermaid
-graph LL
+graph LR;
     1 --> 2;
     2 --> 1;
 ```
