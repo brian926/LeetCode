@@ -13,6 +13,7 @@ Return *true* if there is a cycle in the linked list. Otherwise, return *false*.
 flowchart LR;
     3-->2;
     2-->0;
+    0-->-4;
     -4-->2;
 ```
 ```
