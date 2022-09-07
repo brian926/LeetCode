@@ -13,7 +13,7 @@ Return *true* if there is a cycle in the linked list. Otherwise, return *false*.
 flowchart LR;
     3-->2;
     2-->0;
-    -4--2;
+    -4-->2;
 ```
 ```
 Input: head = [3,2,0,-4], pos = 1
