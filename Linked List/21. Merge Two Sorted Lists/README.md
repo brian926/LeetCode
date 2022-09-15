@@ -28,7 +28,7 @@ Output: [0]
 ```
 
 ## **The Solution**
-
+We'll create our new list as our first step and then we pass through the list. While we have both lists, if one value is less than the other we'll add it as the next node in our list and then get the next value in its own list. Then, get the next value in our new list and continue until one list is completed. Lastly, if there is anything left in either list then we'll append it onto the end of our new list.
 
 ## **The Code**
 
@@ -45,11 +45,7 @@ def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) ->
             arr.next = list2
             list2 = list2.next
         arr = arr.next
-        
-    if list1 == None:
-        arr.next = list1
-    else:
-        arr.next = list2
+
     arr.next = list1 or list2
     return newlist.next
 ```
