@@ -24,7 +24,8 @@ Output: false
 ```
 
 ## **The Solution**
-
+Much like the solution for Same Tree, we'll implement a function that checks if two trees are the same. This function takes two trees, and recursively returns back to itself if the values are equal and passes its left and right nodes. Once we get to the end of the trees, we return back if the last values are equal.
+Our main function will first pass its values into the sameTree function to see if they are equal. Then we check if we have a root, and lastly we pass our left and right nodes of the main tree to the main function. This will check if the subtree exists on the left or right side of the main tree.
 
 ## **The Code**
 
