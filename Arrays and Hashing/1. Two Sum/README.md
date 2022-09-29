@@ -25,6 +25,7 @@ Output: [0,1]
 We know in the problem that there is exactly one solution and we cannot use the same element twice, so we start off with a dictionary to keep our key pairs. First we'll step through the array and find the difference of the element and target. If the difference is in our dictionary, then we can return that element and our dictionary value. Else, we add the element as the key and it's index as the value into our dictionary. This was when we return on a match, we return the index which is the value of the dictionary and the index of the element we current are on.
 
 ## **The Code**
+### Python
 
 ```python
 def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -35,4 +36,18 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
             if (target - nums[i]) in test:
                 return [test[target - nums[i]], i]
             test[nums[i]] = i
+```
+
+### JavaScript
+```JavaScript
+var twoSum = function(nums, target) {
+    let test = new Map()
+    
+    for(let i = 0; i < nums.length; i++) {
+        if (test.has(target - nums[i])) {
+            return [test.get(target - nums[i]), i]
+        }
+        test.set(nums[i], i)
+    }
+};
 ```
