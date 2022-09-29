@@ -28,6 +28,7 @@ Our method of solve this is to create a default dictonary which we can add use o
 We first declare our default dictonary, which allows us to have multiple values per key, then we step though the array of strings. For each string sorted as our key, we append that string and finally after the loop we return the values of the default dictonary.
 
 ## **The Code**
+### Python
 
 ```python
 def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -35,4 +36,17 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         for s in strs:
             hashmap[str(sorted(s))].append(s)
         return hashmap.values()
+```
+### JavaScript
+```JavaScript
+var groupAnagrams = function(strs) {
+    let map = {}
+    
+    for (let x of strs) {
+        let key = [...x].sort()
+        map[key] = map[key] ? [...map[key], x] : [x]
+    }
+    
+    return Object.values(map)
+};
 ```
