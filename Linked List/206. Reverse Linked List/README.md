@@ -48,6 +48,7 @@ Output: []
 To reverse the list, we're going to go through the list until the current equals next. I'll place next into a value, and then use our previous value (which was set as none) to set the next link. Then our current value will be placed into our previous variable and finally our current is switched to our next value. We continue to go on to the next linked, switch it's next pointer from the next link to the previous link, and skip through the link until our current is None which means we've reached the end of the link.
 
 ## **The Code**
+### Python
 
 ```python
 def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -63,4 +64,20 @@ def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
     head = previous
     return head
+```
+
+### JavaScript
+```JavaScript
+var reverseList = function(head) {
+    let [prev, cur, next] = [null, head, null]
+    
+    while(cur) {
+        next = cur.next
+        cur.next = prev
+        prev = cur
+        cur = next
+    }
+    
+    return prev
+};
 ```
