@@ -22,10 +22,10 @@ Output: 9
 ```
 
 ## **The Solution**
-Since we want the longest consecutive sequence, we're going to convert the list into a set and drop any duplicates. Then our method for this problem would be, if the number's previous number is not in the set then we know it is the start of a sequence. We then increase check if the next number is in the set and if it is then increase by one. And to fix the longest sequence we check the max of a value and the current seqeunce we're in. Once we know we have the max in the max value and we've gone through the list, we return our max value.
+Since we want the longest consecutive sequence, we're going to convert the list into a set and drop any duplicates. Then our method for this problem would be, if the number's previous number is not in the set then we know it is the start of a sequence. We then check if the next number is in the set and if it is then increase by one. And to find the longest sequence we check the max of a value and the current seqeunce we're in. Once we know we have the max in the max value and we've gone through the list, we return our max value.
 
 ## **The Code**
-
+### Python
 ```python
 def longestConsecutive(self, nums: List[int]) -> int:
     setOfList = set(nums)
@@ -37,4 +37,29 @@ def longestConsecutive(self, nums: List[int]) -> int:
                 y += 1
             best = max(best, y - x)
     return best
+```
+### JavaScript
+```JavaScript
+var longestConsecutive = function(nums) {
+    const newSet = new Set(nums)
+    let maxScore = 0
+    
+    for (let num of [...newSet]) {
+
+        let prev = num - 1
+        if (newSet.has(prev)) {
+            continue
+        }
+
+        let [cur, score] = [num + 1, 1]
+        while (newSet.has(cur)) {
+            cur++
+            score++
+        }
+        
+        maxScore = Math.max(maxScore, score)
+    }
+    return maxScore
+};
+
 ```
