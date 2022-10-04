@@ -25,7 +25,7 @@ Output: true
 We will first create a set, since Set items are unordered, unchangeable, and do not allow duplicates values. Then we will simply loop through the values in the array and test if that value is in the Set. If not, we will add it to the Set and if it is then we know we have a duplicate and we'll return true.
 
 ## **The Code**
-
+### Python
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
         test = set()
@@ -36,4 +36,18 @@ def containsDuplicate(self, nums: List[int]) -> bool:
             else:
                 test.add(i)
         return False
+```
+### JavaScript
+```JavaScript
+var containsDuplicate = function(nums) {
+    let test = new Set()
+    for(const num of nums) {
+        if(test.has(num)) {
+            return true
+        } 
+        test.add(num)
+        
+    }
+    return false
+};
 ```
