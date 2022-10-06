@@ -56,6 +56,7 @@ Now our return array has all our answers with each index being products all of v
 
 ## **The Code**
 
+### Python
 ```python
 def productExceptSelf(self, nums: List[int]) -> List[int]:
     res = [1] * len(nums)
@@ -71,4 +72,24 @@ def productExceptSelf(self, nums: List[int]) -> List[int]:
         postfix *= nums[x]
         
     return res
+```
+
+### JavaScript
+```JavaScript
+var productExceptSelf = function(nums) {
+    let arr = new Array(nums.length).fill(1)
+    let [prefix, postfix] = [1, 1]
+    
+    for(let i = 0; i < nums.length; i++) {
+        arr[i] = prefix
+        prefix *= nums[i]
+    }
+    
+    for(let x = (nums.length - 1); 0 <= x; x--) {
+        arr[x] *= postfix
+        postfix *= nums[x]
+    }
+    
+    return arr
+};
 ```
