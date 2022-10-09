@@ -41,6 +41,7 @@ countT = {
 Once finished, we can then simply compare the two dictionaries and return whether they are equal.
 
 ## **The Code**
+### Python
 ```python
 def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
@@ -52,4 +53,29 @@ def isAnagram(self, s: str, t: str) -> bool:
             countS[s[i]] = 1 + countS.get(s[i], 0)
             countT[t[i]] = 1 + countT.get(t[i], 0)
         return countS == countT
+```
+
+### JavaScript
+```javascript
+var isAnagram = function(s, t) {
+    if (s.length != t.length) {
+        return false
+    }
+    
+    let countS = new Map()
+    let countT = new Map()
+    
+    for(let i = 0; i < s.length; i++) {
+        countS.set(s[i], 1 + (countS.get(s[i]) || 0))
+        countT.set(t[i], 1 + (countT.get(t[i]) || 0))
+    }
+    
+    for(let [k, v] of countS) {
+        if (v !== countT.get(k)) {
+            return false
+        }
+    }
+    
+    return true
+};
 ```
