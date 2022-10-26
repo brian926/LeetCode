@@ -19,7 +19,9 @@ Output: [-1]
 ```
 
 ## **The Solution**
-
+First, we pop off the first element of the preorder list which would be the root and pass that index in the inorder list.
+Then with that index, we use that element as our root and pass the left as the preorder list along with everything left of that element in the inorder and do the same on the right side except with everything to the right of the element in the preorder array. This is because the preorder array alreay has the element popped off and we know everything to the left of the element in the inorder list would be on the left side of the tree and reserve on the right.
+Then we have our tree and we can simply return root.
 
 ## **The Code**
 
